@@ -49,6 +49,26 @@ class Grade extends StatelessWidget {
               fontWeight: FontWeight.bold
             ),
             ),
+            SizedBox(
+              height: 30.0
+            ),
+            Text("VELY POWER LEVEL",
+                style: TextStyle(
+                  color: Colors.white,
+                  letterSpacing: 2.0,
+                ) // 텍스트 스타일 추가
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Text("14",
+              style: TextStyle(
+                  color: Colors.white,
+                  letterSpacing: 2.0,
+                  fontSize: 28.0,
+                  fontWeight: FontWeight.bold
+              ),
+            ),
           ],
         ),
       )
