@@ -30,6 +30,7 @@ class Grade extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.fromLTRB(30.0, 40.0, 0.0, 0.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start, // 왼쪽 정렬을 맞춰주는 속성
           children: <Widget>[
             Text("NAME",
             style: TextStyle(
