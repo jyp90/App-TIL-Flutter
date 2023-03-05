@@ -8,31 +8,43 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: "Charactor card",
-      home: MyCard(),
+      title: "Character card",
+      home: Grade(),
     );
   }
 }
 
-class MyCard extends StatelessWidget {
-  const MyCard({Key? key}) : super(key: key);
+class Grade extends StatelessWidget {
+  const Grade({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.amber[800],
       appBar: AppBar(
-        title: const Text('Vely'),
+        title: const Text("VELY"),
+        backgroundColor: Colors.amber[700],
         centerTitle: true,
-        backgroundColor: Colors.orange,
         elevation: 0.0,
       ),
-      body: Center( // 화면 정중앙에 보이도록 함
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(30.0, 40.0, 0.0, 0.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, // 상단 중간 하단 정렬 관련
-          children: const <Widget>[
-            Text("Hello"),
-            Text("Hello"),
-            Text("Hello"),
+          children: <Widget>[
+            Text("NAME",
+            style: TextStyle(
+              color: Colors.white,
+              letterSpacing: 2.0,
+            ) // 텍스트 스타일 추가
+            ),
+            Text("VELY",
+            style: TextStyle(
+              color: Colors.white,
+              letterSpacing: 2.0,
+              fontSize: 28.0,
+              fontWeight: FontWeight.bold
+            ),
+            ),
           ],
         ),
       )
