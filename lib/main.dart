@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Character card",
       home: Grade(),
     );
@@ -39,7 +40,7 @@ class Grade extends StatelessWidget {
               ),
             ),
             Divider(
-              height: 60.0,
+              height: 60.0, // Divider 의 위 30, 아래 30 떨어진 의미
               color: Colors.grey[850],
               thickness: 0.5,
               endIndent: 30.0,
@@ -123,6 +124,13 @@ class Grade extends StatelessWidget {
                     )),
               ],
             ),
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage("assets/roopy.png"),
+                radius: 40.0,
+                backgroundColor: Colors.amber[800],
+              )
+            )
           ],
         ),
       )
