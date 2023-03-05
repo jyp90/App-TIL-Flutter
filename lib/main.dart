@@ -38,6 +38,12 @@ class Grade extends StatelessWidget {
                 radius: 60.0,
               ),
             ),
+            Divider(
+              height: 60.0,
+              color: Colors.grey[850],
+              thickness: 0.5,
+              endIndent: 30.0,
+            ),
             Text("NAME",
             style: TextStyle(
               color: Colors.white,
