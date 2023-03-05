@@ -32,6 +32,12 @@ class Grade extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start, // 왼쪽 정렬을 맞춰주는 속성
           children: <Widget>[
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage("assets/vely.png"),
+                radius: 60.0,
+              ),
+            ),
             Text("NAME",
             style: TextStyle(
               color: Colors.white,
