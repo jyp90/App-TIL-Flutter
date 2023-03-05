@@ -69,6 +69,19 @@ class Grade extends StatelessWidget {
                   fontWeight: FontWeight.bold
               ),
             ),
+            SizedBox(
+              height: 30.0,
+            ),
+            Row(
+              children: <Widget>[
+                Icon(Icons.check_circle_outline),
+                Text("using lightsaber",
+                style: TextStyle(
+                  fontSize: 16.0,
+                  letterSpacing: 1.0,
+                )),
+              ],
+            )
           ],
         ),
       )
