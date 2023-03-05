@@ -37,6 +37,9 @@ class Grade extends StatelessWidget {
               letterSpacing: 2.0,
             ) // 텍스트 스타일 추가
             ),
+            SizedBox(
+              height: 10.0,
+            ),
             Text("VELY",
             style: TextStyle(
               color: Colors.white,
