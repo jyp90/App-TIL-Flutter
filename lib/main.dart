@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
+const characterName = "맹수쪼꼬";
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -21,10 +22,10 @@ class Grade extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber[800],
+      backgroundColor: Colors.deepPurple[300],
       appBar: AppBar(
-        title: const Text("VELY"),
-        backgroundColor: Colors.amber[700],
+        title: const Text(characterName),
+        backgroundColor: Colors.deepPurple[400],
         centerTitle: true,
         elevation: 0.0,
       ),
@@ -35,7 +36,7 @@ class Grade extends StatelessWidget {
           children: <Widget>[
             const Center(
               child: CircleAvatar(
-                backgroundImage: AssetImage("assets/vely.png"),
+                backgroundImage: AssetImage("assets/choco2.jpeg"),
                 radius: 60.0,
               ),
             ),
@@ -54,7 +55,7 @@ class Grade extends StatelessWidget {
             const SizedBox(
               height: 10.0,
             ),
-            const Text("VELY",
+            const Text(characterName,
             style: TextStyle(
               color: Colors.white,
               letterSpacing: 2.0,
@@ -65,7 +66,7 @@ class Grade extends StatelessWidget {
             const SizedBox(
               height: 30.0
             ),
-            const Text("VELY SUPER SKILLS",
+            const Text("$characterName 레벨과 특징",
                 style: TextStyle(
                   color: Colors.white,
                   letterSpacing: 2.0,
@@ -74,7 +75,7 @@ class Grade extends StatelessWidget {
             const SizedBox(
               height: 10.0,
             ),
-            const Text("14",
+            const Text("93",
               style: TextStyle(
                   color: Colors.white,
                   letterSpacing: 2.0,
@@ -91,7 +92,7 @@ class Grade extends StatelessWidget {
                 SizedBox(
                   width: 10.0,
                 ),
-                Text("꼬불꼬불 흰 털",
+                Text("콧물을 잘흘리는 애교왕",
                 style: TextStyle(
                   fontSize: 16.0,
                   letterSpacing: 1.0,
@@ -104,7 +105,7 @@ class Grade extends StatelessWidget {
                 SizedBox(
                   width: 10.0,
                 ),
-                Text("콩 3개",
+                Text("하얀 수염의 맹수",
                     style: TextStyle(
                       fontSize: 16.0,
                       letterSpacing: 1.0,
@@ -117,7 +118,7 @@ class Grade extends StatelessWidget {
                 SizedBox(
                   width: 10.0,
                 ),
-                Text("귀여운 짖음",
+                Text("식탐이 강함",
                     style: TextStyle(
                       fontSize: 16.0,
                       letterSpacing: 1.0,
@@ -126,7 +127,7 @@ class Grade extends StatelessWidget {
             ),
             Center(
               child: CircleAvatar(
-                backgroundImage: const AssetImage("assets/roopy.png"),
+                backgroundImage: const AssetImage("assets/choco-sleep.jpeg"),
                 radius: 40.0,
                 backgroundColor: Colors.amber[800],
               )

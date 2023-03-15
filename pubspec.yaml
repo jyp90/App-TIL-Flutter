@@ -62,6 +62,10 @@ flutter:
   assets:
      - assets/roopy.png
      - assets/vely.png
+     - assets/choco.jpg
+     - assets/choco2.jpeg
+     - assets/choco-sleep.jpeg
+     - assets/choco_img.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
