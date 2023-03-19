@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'AppBar',
       theme: ThemeData(primarySwatch: Colors.red),
       home: const MyPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -24,6 +25,7 @@ class MyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: '/', // 다중 페이지로 이동할 때는 이것 사용 !
       routes: {
         '/' : (ctx) => ScreenA(),
