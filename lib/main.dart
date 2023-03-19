@@ -1,36 +1,35 @@
 import 'package:flutter/material.dart';
+import 'ScreenA.dart';
+import 'ScreenB.dart';
+import 'ScreenC.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'AppBar',
       theme: ThemeData(primarySwatch: Colors.red),
-      home: MyPage(),
+      home: const MyPage(),
     );
   }
 }
 
 class MyPage extends StatelessWidget {
+  const MyPage({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.blue,
-      body: SafeArea(
-        child: Container(
-          color: Colors.red,
-          width: 100,
-          height: 100,
-          margin: EdgeInsets.symmetric(
-            vertical: 80,
-            horizontal: 20
-          ),
-          padding: EdgeInsets.all(40),
-          child: Text('Hello'),
-        ),
-      )
+    return MaterialApp(
+      initialRoute: '/', // 다중 페이지로 이동할 때는 이것 사용 !
+      routes: {
+        '/' : (ctx) => ScreenA(),
+        '/b' : (ctx) => ScreenB(),
+        '/c' : (ctx) => ScreenC(),
+      },
     );
   }
 }
