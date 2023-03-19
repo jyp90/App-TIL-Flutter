@@ -1,36 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:mungmoong/onboarding.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'AppBar',
-      theme: ThemeData(primarySwatch: Colors.red),
-      home: MyPage(),
+    return const MaterialApp(
+      home: OnBoardingPage(),
     );
   }
 }
 
 class MyPage extends StatelessWidget {
+  const MyPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
-      body: SafeArea(
-        child: Container(
-          color: Colors.red,
-          width: 100,
-          height: 100,
-          margin: EdgeInsets.symmetric(
-            vertical: 80,
-            horizontal: 20
-          ),
-          padding: EdgeInsets.all(40),
-          child: Text('Hello'),
+        appBar: AppBar(
+          title: const Text('Main Page'),
         ),
-      )
-    );
+        body: Center(
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              'Main Screen',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const OnBoardingPage()));
+                },
+                child: Text('Go to onboarding Screen'))
+          ],
+        )));
   }
 }
