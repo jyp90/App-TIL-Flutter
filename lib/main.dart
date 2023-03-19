@@ -72,6 +72,14 @@ class MyButtons extends StatelessWidget {
                 style: OutlinedButton.styleFrom(
                   primary: Colors.cyan
                 )
+              ),
+              ButtonBar(
+                alignment: MainAxisAlignment.center, // 가운데정렬
+                buttonPadding: EdgeInsets.all(20), // 버튼 패딩값 넣기
+                children: [
+                  TextButton(onPressed: (){}, child: Text("TextButton")),
+                  ElevatedButton(onPressed: (){}, child: Text("ElevatedButton"),),
+                ],
               )
             ],
           ),
