@@ -30,41 +30,50 @@ class MyButtons extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextButton(
-                onPressed: () {
-                  print('text button');
-                },
-                child: Text(
-                  'Text button',
-                  style: TextStyle(fontSize: 20.0),
-                ),
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.white,
-                ),
-              ),
-              ElevatedButton(
+              TextButton.icon(
                   onPressed: () {
-                    print('Elevated button');
+                    print('Icon Button');
                   },
-                  child: Text('Elevated Button'),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.orangeAccent, // 버튼 색깔 옵션
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0), // 라운드 둥글게 옵션
+                  icon: Icon(
+                    Icons.home,
+                    size: 30.0,
+                    color: Colors.blue,
+                  ),
+                  label: Text('Go to Home'),
+                  style: TextButton.styleFrom(
+                    primary: Colors.purple,
+                  )),
+              ElevatedButton.icon(
+                  onPressed: () {
+                    print('Elevated Button');
+                  },
+                  icon: Icon(
+                    Icons.access_alarm,
+                    size: 30.0,
+                    color: Colors.white, // 아이콘의 색상
+                  ),
+                  label: Text(
+                    'Set alarm',
+                    style: TextStyle(color: Colors.white), // 버튼 라벨의 색상
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.black,
+                    minimumSize: Size(200, 50),
+                  )),
+              OutlinedButton.icon(
+                onPressed: () {
+                  print('Outliend icon Button');
+                },
+                icon: Icon(Icons.access_time_filled,
+                    size: 30.0, color: Colors.amber),
+                label: Text(
+                  'What time is now?',
+                  style: TextStyle(color: Colors.amber),
                 ),
-                elevation: 0.0, // 그림자 제거 옵션
-              ),
-              ),
-              OutlinedButton(onPressed: () {
-                print('Outlined Button');
-              }, child: Text('Outlined button'),
-              style: OutlinedButton.styleFrom(
-                primary: Colors.black87,
-                side: BorderSide(
-                  color: Colors.black87,
-                  width: 2.0,
-                ),
-              )),
+                style: OutlinedButton.styleFrom(
+                  primary: Colors.cyan
+                )
+              )
             ],
           ),
         ));
