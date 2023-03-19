@@ -44,9 +44,7 @@ class MyButtons extends StatelessWidget {
                     primary: Colors.purple,
                   )),
               ElevatedButton.icon(
-                  onPressed: () {
-                    print('Elevated Button');
-                  },
+                  onPressed: null,
                   icon: Icon(
                     Icons.access_alarm,
                     size: 30.0,
@@ -59,6 +57,7 @@ class MyButtons extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     primary: Colors.black,
                     minimumSize: Size(200, 50),
+                    onSurface: Colors.pink, // 비활성화된 버튼의 색상도 변경 가능
                   )),
               OutlinedButton.icon(
                 onPressed: () {
