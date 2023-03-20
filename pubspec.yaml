@@ -66,6 +66,7 @@ flutter:
      - assets/choco2.jpeg
      - assets/choco-sleep.jpeg
      - assets/choco_img.jpg
+     - image/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
