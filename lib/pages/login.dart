@@ -4,8 +4,18 @@ import 'package:flutrain/pages/login_theme.dart';
 import 'package:flutter/material.dart';
 import '../components/comp.dart';
 
-class LogIn extends StatelessWidget {
-  const LogIn({super.key});
+
+class Login extends StatefulWidget {
+  const Login({super.key});
+
+  @override
+  _LoginState createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+
+  TextEditingController controller1 = TextEditingController();
+  TextEditingController controller2 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
