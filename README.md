@@ -1,6 +1,6 @@
-# mungmoong
+# Flutter training 
 
-A new Mungmoong on Flutter project.
+플러터 자습을 위해 만든 프로젝트
 
 ## Getting Started
 

@@ -1,11 +1,11 @@
 {
-    "name": "mungmoong",
-    "short_name": "mungmoong",
+    "name": "flutrain",
+    "short_name": "flutrain",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Mungmoong on Flutter project.",
+    "description": "A new flutrain on Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
