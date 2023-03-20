@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 TextField getIdLabel(TextEditingController controller) {
   return TextField(
+    autofocus: true,
     controller: controller,
     decoration: const InputDecoration(labelText: '아이디를 입력해주세요.'),
     keyboardType: TextInputType.emailAddress,
