@@ -14,23 +14,32 @@ class MyApp extends StatelessWidget {
 }
 
 class MyPage extends StatelessWidget {
+  int counter = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
       body: SafeArea(
-        child: Container(
-          color: Colors.red,
-          width: 100,
-          height: 100,
-          margin: EdgeInsets.symmetric(
-            vertical: 80,
-            horizontal: 20
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('You have pushed the button this many times:'),
+              Text('$counter',
+              style: Theme.of(context).textTheme.displaySmall,)
+            ],
           ),
-          padding: EdgeInsets.all(40),
-          child: Text('Hello'),
         ),
-      )
+
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+          counter++;
+          print("$counter");
+        },
+      ),
     );
   }
 }
