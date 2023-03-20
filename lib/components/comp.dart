@@ -1,3 +1,4 @@
+import 'package:flutrain/pages/dice.dart';
 import 'package:flutter/material.dart';
 
 TextField getIdLabel(TextEditingController controller) {
@@ -17,7 +18,7 @@ TextField getPasswordLabel(TextEditingController controller) {
   );
 }
 
-ButtonTheme getNextStepButton(TextEditingController controller1, TextEditingController controller2) {
+ButtonTheme getNextStepButton(BuildContext context, TextEditingController controller1, TextEditingController controller2) {
   return ButtonTheme(
     minWidth: 100.0,
     height: 50.0,
@@ -28,6 +29,9 @@ ButtonTheme getNextStepButton(TextEditingController controller1, TextEditingCont
         size: 35.0,
       ),
       onPressed: () {
+        if(controller1.text == 'dice' && controller2.text == '1234') {
+          Navigator.push(context, MaterialPageRoute(builder: (ctx) => Dice()));
+        }
       },
     ),
   );
