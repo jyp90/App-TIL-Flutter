@@ -14,8 +14,8 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
 
-  TextEditingController controller1 = TextEditingController();
-  TextEditingController controller2 = TextEditingController();
+  TextEditingController idCtrl = TextEditingController();
+  TextEditingController pwCtrl = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -24,35 +24,35 @@ class _LoginState extends State<Login> {
     return Scaffold(
         appBar: getAppBar('Login', primary),
         body: Builder(
-          builder: (context) {
-            return SingleChildScrollView(
-              child: Column(
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.only(top: 50),
-                  ),
-                  Center(
-                      child: getImage('assets/vely.png')
-                  ),
-                  Form(
-                      child: Theme(
-                          data: getAppTheme(primary),
-                          child: Container(
-                            padding: const EdgeInsets.all(40.0),
-                            child: Column(
-                              children: [
-                                getIdLabel(controller1),
-                                getPasswordLabel(controller2),
-                                const SizedBox(height: 40.0),
-                                getNextStepButton(context, controller1, controller2),
-                              ],
-                            ),
-                          )))
-                ],
-              ),
-            );
-          }
+            builder: (context) {
+              return SingleChildScrollView(
+                child: Column(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(top: 50),
+                    ),
+                    Center(
+                        child: getImage('assets/vely.png')
+                    ),
+                    Form(
+                        child: Theme(
+                            data: getAppTheme(primary),
+                            child: Container(
+                              padding: const EdgeInsets.all(40.0),
+                              child: Column(
+                                children: [
+                                  getIdLabel(idCtrl),
+                                  getPasswordLabel(pwCtrl),
+                                  const SizedBox(height: 40.0),
+                                  getNextStepButton(
+                                      context, idCtrl, pwCtrl),
+                                ],
+                              ),
+                            )))
+                  ],
+                ),
+              );
+            }
         ));
   }
 }
-
