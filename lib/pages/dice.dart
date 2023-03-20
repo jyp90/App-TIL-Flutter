@@ -1,7 +1,9 @@
 import 'package:flutrain/components/comp.dart';
 import 'package:flutrain/pages/appbar.dart';
 import 'package:flutrain/utils/math-util.dart';
+import 'package:flutrain/utils/toastmessage.dart';
 import 'package:flutter/material.dart';
+
 
 class Dice extends StatefulWidget {
   const Dice({super.key});
@@ -46,6 +48,7 @@ class _DiceState extends State<Dice> {
                       setState(() {
                         leftDice = getRandomDice();
                         rightDice = getRandomDice();
+                        // showToast('Left dice : $leftDice / Right dice : $rightDice');
                       });
                     },
                 ),
