@@ -53,3 +53,7 @@ void snackBar(BuildContext ctx, String text) {
         backgroundColor: Colors.orange,)
   );
 }
+
+Image getDiceImageByPath(String path) {
+  return Image.asset(path);
+}

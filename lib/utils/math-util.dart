@@ -22,3 +22,9 @@ void grade() {
     print('A학점 입니다.');
   }
 }
+
+int getRandomDice() {
+  int random = Random().nextInt(6) + 1;
+  print('random $random');
+  return random;
+}
