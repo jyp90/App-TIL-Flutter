@@ -39,10 +39,10 @@ class _LoginState extends State<Login> {
                         padding: const EdgeInsets.all(40.0),
                         child: Column(
                           children: [
-                            getIdLabel(),
-                            getPasswordLabel(),
+                            getIdLabel(controller1),
+                            getPasswordLabel(controller2),
                             const SizedBox(height: 40.0),
-                            getNextStepButton(),
+                            getNextStepButton(controller1, controller2),
                           ],
                         ),
                       )))
